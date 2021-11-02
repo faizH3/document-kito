@@ -8,24 +8,25 @@ while True:
     choice = input('enter your choice: ')
     if choice == '1':
         print('''
-            CREATE              -create database nama_database;
-                                -create table nama_table (col1 type, col2 type, ...);
-            DROP                -drop database nama_table;
-                                -drop table nama_database;
-            ALTER               -alter table nama_table add column nama_colun datatype;
-                                -alter nama_table drop column nama_colun;
+            CREATE              -CREATE DATABASE database_name;
+                                -CREATE TABLE table_name (col1 type, col2 type, ...);
+            DROP                -DROP DATABASE database_name;
+                                -DROP TABLE table_name;
+            ALTER               -(ADD COLUMN) ALTER TABLE table_name ADD COLUMN column_name datatype;
+                                -(DROP COLUMN) ALTER TABLE table_name DROP COLUMN column_name;
+                                -(MODIFY COLUMN) ALTER TABLE table_name MODIFY COLUMN column_name datatype;
                                 ''')
         input()
     elif choice == '2':
         print('''
-            SELECT              -select * from nama_table;
-                                -select nama_column from nama_table;
-            DELETE              -delete name_table (all)
-                                -delete from nama_table where condition;
-            INSERT              -insert into nama_table values (value);
-                                -insert into nama_table (nama_colun) values (value);
-                                -insert into table2 selet*from table1 where condition;
-                                -   
+            SELECT              -SELECT*FROM table_name;
+                                -SELECT column_name FROM table_name;
+            DELETE              -DELETE table_name (all)
+                                -DELETE FROM table_name WHERE condition;
+            INSERT              -INSERT INTO table_name VALUES (value);
+                                -INSERT INTO table_name (column_name) VALUES (value);
+                                -INSERT INTO table2 SELECT*FROM table1 WHERE condition;
+            UPDATE              -UPDATE table_name SET column1=value1, column2=value2 WHERE condition;
                                 ''')
     elif choice == '0':
         exit() 
